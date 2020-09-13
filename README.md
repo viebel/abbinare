@@ -1,81 +1,49 @@
-match
+Abbinare
 ====
 
-An optimized pattern matching library for Clojure. It supports Clojure
-1.5.1 and later as well as ClojureScript.
+A fork of [core.match](https://github.com/clojure/core.match) ported for use with self-hosted ClojureScript.
 
-You can find more detailed information
-[here](https://github.com/clojure/core.match/wiki/Overview).
 
-Releases and dependency information
-----
+## Releases and Dependency Information
 
-Latest release: 0.3.0-alpha4
+[![Clojars Project](https://img.shields.io/clojars/v/viebel/abbinare.svg)](https://clojars.org/viebel/abbinare)
 
-* [All released versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22core.match%22)
+[Deps](https://clojure.org/guides/deps_and_cli) dependency information:
 
-[Leiningen](http://github.com/technomancy/leiningen/) dependency information:
+```clj
+ {viebel/abbinare {:mvn/version "1.10.597"}}
+```  
 
+[Leiningen](https://github.com/technomancy/leiningen) dependency information:
+
+```clj
+ [viebel/abbinare "1.10.597"]
 ```
-[org.clojure/core.match "0.3.0-alpha4"]
-```
 
-[Maven](http://maven.apache.org) dependency information:
+[Maven](http://maven.apache.org/) dependency information:
 
-```
+```xml
 <dependency>
-  <groupId>org.clojure</groupId>
-  <artifactId>core.match</artifactId>
-  <version>0.3.0-alpha4</version>
+  <groupId>viebel</groupId>
+  <artifactId>abbinare</artifactId>
+  <version>1.10.597</version>
 </dependency>
 ```
 
-Example Usage
-----
+## Usage
 
-From Clojure:
+Abbinare preserves the namespaces present in `core.match`. Thus, bootstrap-compatible ClojureScript code that makes use of `core.match` can operate in self-hosted environments if you make the Abbinare artifact available for loading in lieu of the official `core.match` artifact.
 
-```clojure
-(require '[clojure.core.match :refer [match]])
+## Demo
 
-(doseq [n (range 1 101)]
-  (println
-    (match [(mod n 3) (mod n 5)]
-      [0 0] "FizzBuzz"
-      [0 _] "Fizz"
-      [_ 0] "Buzz"
-      :else n)))
-```
+Short demo in the [Klipse app](http://app.klipse.tech/?cljs_in=(ns%20my.match%0A%20%20(%3Arequire%20%5Bcljs.core.match%20%3Arefer-macros%20%5Bmatch%5D%5D))%0A%0A%0A(let%20%5Bx%20true%0A%20%20%20%20%20%20y%20true%0A%20%20%20%20%20%20z%20true%5D%0A%20%20(match%20%5Bx%20y%20z%5D%0A%20%20%20%20%20%20%20%20%20%5B_%20false%20true%5D%201%0A%20%20%20%20%20%20%20%20%20%5Bfalse%20true%20_%20%5D%202%0A%20%20%20%20%20%20%20%20%20%5B_%20_%20false%5D%203%0A%20%20%20%20%20%20%20%20%20%5B_%20_%20true%5D%204%0A%20%20%20%20%20%20%20%20%20%3Aelse%205)))
 
-From ClojureScript:
 
-```clojure
-(ns foo.bar
-  (:require [cljs.core.match :refer-macros [match]]))
+Long demo: [An interactive core.match tutorial](http://localhost:4000/clojure/2016/10/25/core-match.html)
 
-(doseq [n (range 1 101)]
-  (println
-    (match [(mod n 3) (mod n 5)]
-      [0 0] "FizzBuzz"
-      [0 _] "Fizz"
-      [_ 0] "Buzz"
-      :else n)))
-```
+## License
 
-For more detailed descriptions of usage please refer to the
-[wiki](http://github.com/clojure/core.match/wiki).
+Revisions in this fork:
+Copyright © 2016–2020 Yehonathan Sharvit and Contributors
 
-Developer information
-----
-
-* [Bug Tracker](http://dev.clojure.org/jira/browse/MATCH)
-* [Continuous Integration](http://build.clojure.org/job/core.match/)
-* [Compatibility Test Matrix](http://build.clojure.org/job/core.match-test-matrix/)
-
-Copyright and license
-----
-
-Copyright © 2010-2014 David Nolen, Ambrose Bonnaire-Sergeant, Rich
-Hickey & contributors.
-
-Licensed under the EPL (see the file epl.html).
+Distributed under the Eclipse Public License, the same as Clojure.

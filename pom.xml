@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>viebel</groupId>
-  <artifactId>core.match</artifactId>
+  <artifactId>abbinare</artifactId>
   <packaging>jar</packaging>
-  <version>0.3.0-self-host</version>
-  <name>core.match</name>
-  <description>Optimized pattern matching for Clojure</description>
+  <version>1.10.597</version>
+  <name>abbinare</name>
+  <description>core.match for self-hosted ClojureScript</description>
   <scm>
-    <url>https://github.com/viebel/core.match</url>
-    <connection>scm:git:git://github.com/viebel/core.match.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/viebel/core.match.git</developerConnection>
-    <tag>394f7ae96200eef6126ba4f401367ba6a4159a21</tag>
+    <url>https://github.com/viebel/abbinare</url>
+    <connection>scm:git:git://github.com/viebel/abbinare.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/viebel/abbinare.git</developerConnection>
+    <tag>8222a31f1978862ee192f60431f90a06228a3bba</tag>
   </scm>
   <build>
     <sourceDirectory>src/main/clojure</sourceDirectory>
