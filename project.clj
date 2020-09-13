@@ -1,17 +1,16 @@
-(defproject org.clojure/core.match "0.3.0-alpha4-SNAPSHOT"
-  :description "Optimized pattern matching for Clojure"
+(defproject viebel/abbinare "1.10.597"
+  :description "core.match for self-hosted ClojureScript"
 
   :jvm-opts ^:replace ["-Xmx512m" "-server"]
 
   :test-paths ["src/test/clojure"]
   :source-paths ["src/main/clojure"]
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
+  :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/tools.analyzer.jvm "0.6.5"]
-                 [org.clojure/clojurescript "0.0-2496" :scope "provided"]]
+                 [org.clojure/clojurescript "1.10.597" :scope "provided"]]
 
-  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]
-            [cider/cider-nrepl "0.8.1"]]
+  :plugins [[lein-cljsbuild "1.1.8"] ]
 
   :cljsbuild
   {:builds
