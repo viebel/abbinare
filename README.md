@@ -43,7 +43,10 @@ Long demo: [An interactive core.match tutorial](http://localhost:4000/clojure/20
 
 ## License
 
+Copyright © 2010-2020 David Nolen, Ambrose Bonnaire-Sergeant, Rich
+Hickey & contributors.
+
 Revisions in this fork:
-Copyright © 2016–2020 Yehonathan Sharvit and Contributors
+Copyright © 2017–2020 Yehonathan Sharvit and Contributors
 
 Distributed under the Eclipse Public License, the same as Clojure.
